@@ -119,7 +119,7 @@
 }
 
 .navbar-light.sticky-top {
-    top: -100px;
+    top: 0;
     transition: .5s;
 }
 
@@ -381,3 +381,149 @@
     padding-right: 0;
     border-right: none;
 }
+
+
+/*** Hero Section ***/
+/* ASSET: img/hero-bg.jpg — fondo del hero (foto de mecánico en taller) */
+.hero-section {
+    position: relative;
+    min-height: 580px;
+    background-image: url('../img/carousel-bg-1.jpg'); /* placeholder hasta tener hero-bg.jpg */
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-logo {
+    max-width: 220px;
+    max-height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .5));
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1dab52;
+    color: #fff;
+}
+
+
+/*** Floating Buttons ***/
+.btn-float-whatsapp,
+.btn-float-appointment {
+    position: fixed;
+    right: 20px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    z-index: 998;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .3);
+    transition: transform .2s;
+}
+
+.btn-float-whatsapp:hover,
+.btn-float-appointment:hover {
+    transform: scale(1.1);
+    color: #fff;
+}
+
+.btn-float-whatsapp {
+    bottom: 215px;
+    background-color: #25D366;
+}
+
+.btn-float-appointment {
+    bottom: 150px;
+    background-color: var(--primary);
+}
+
+/*** Stack de imágenes (sección Testimonial) ***/
+.testimonial-img-stack {
+    position: relative;
+    width: 350px;
+    height: 420px;
+    flex-shrink: 0;
+    transform: translateX(-40px);
+}
+
+.testimonial-img-stack .stack-img {
+    position: absolute;
+    width: 250px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+}
+
+/* Las tres cartas tienen la misma orientación,
+   desplazadas en diagonal (de atrás a adelante: esquina superior-izquierda → inferior-derecha) */
+.stack-img--back {
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.stack-img--mid {
+    top: 40px;
+    left: 40px;
+    z-index: 2;
+}
+
+.stack-img--front {
+    top: 80px;
+    left: 80px;
+    z-index: 3;
+}
+
+/*** Iconos de redes sociales estáticos (sección Testimonial) ***/
+.social-static {
+    width: 80px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    color: #fff;
+    text-decoration: none;
+    transition: transform .2s, opacity .2s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
+}
+
+.social-static:hover {
+    transform: scale(1.08);
+    color: #fff;
+    opacity: .9;
+}
+
+.social-static.tiktok { background: #010101; }
+.social-static.instagram { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+.social-static.facebook { background: #1877F2; }
