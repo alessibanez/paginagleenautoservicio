@@ -1,9 +1,9 @@
 /********** Template CSS **********/
 :root {
-    --primary: #D81324;
-    --secondary: #0B2154;
+    --primary: #1985C0;
+    --secondary: #F5C414;
     --light: #F2F2F2;
-    --dark: #111111;
+    --dark: #1A3F70;
 }
 
 .fw-medium {
@@ -41,9 +41,12 @@
     transition: .5s;
 }
 
-.btn.btn-primary,
-.btn.btn-secondary {
+.btn.btn-primary {
     color: #FFFFFF;
+}
+
+.btn.btn-secondary {
+    color: #1A3F70;
 }
 
 .btn-square {

@@ -6,11 +6,48 @@ Sitio web estático para **Automotriz Gleen**, taller de servicio automotriz en 
 
 ## Changelog
 
+### v0.2 — Datos reales del taller, nueva paleta y rediseño de secciones
+
+**Todos los HTML (8 archivos)**
+- Datos de contacto actualizados en topbar y footer de todas las páginas:
+  - Dirección: Av. Independencia 1313-A, Col. Reforma y Ferrocarriles Nacionales, C.P. 50070, Toluca, Edo. Méx.
+  - Teléfono: 722 534-3858
+  - Correo: contacto@gleenautomotriz.com
+  - Horario: Lunes–Viernes 09:00–18:00 / Sábados 09:00–14:00 hrs.
+- Etiquetas de horario y dirección traducidas al español en footer
+
+**css/style.css + css/bootstrap.min.css**
+- Paleta de colores completamente reemplazada (rojo/navy → azul/amarillo):
+  - `--primary`: `#D81324` → `#1985C0` (azul medio)
+  - `--secondary`: `#0B2154` → `#F5C414` (amarillo/dorado)
+  - `--dark`: `#111111` → `#1A3F70` (azul marino)
+- Texto de `.btn-secondary` cambiado a color oscuro para contraste correcto sobre fondo amarillo
+- 52 ocurrencias de colores hardcodeados actualizadas en `bootstrap.min.css`
+
+**index.html**
+- Sección Fact (contadores 1234) eliminada
+- Sección About rediseñada:
+  - Layout: imagen a la izquierda, texto a la derecha
+  - Título real: "Gleen, su mejor opción en servicios automotrices"
+  - Descripción real del taller
+  - Eliminados: lista numerada (01/02/03), badge "15 Años", botón "Leer Más"
+  - Imagen placeholder: `about.jpg` (pendiente asset `about-cars.jpg`)
+- Tarjetas de contacto actualizadas: Dirección / Teléfono / Correo
+- Mapa actualizado a dirección real de Toluca
+
+**contact.html**
+- Tarjetas de info rediseñadas: Dirección / Teléfono / Correo
+- Tarjeta Correo incluye texto: "Realiza una cotización, envía un correo a nuestra dirección."
+- Mapa actualizado a dirección real de Toluca
+- Formulario traducido al español (labels, placeholders, botón)
+
+---
+
 ### v0.1 — Primera sincronización con el diseño de Canva
 
 **index.html**
-- Idioma cambiado a `es`, título y meta tags actualizados para Automotriz Gleen / Toluca
-- Actualización de Font Awesome 5.10 → 6.4 (necesario para el ícono de TikTok)
+- Idioma cambiado a `es`
+- Actualización de Font Awesome 5.10 → 6.4
 - **Hero reemplazado**: se eliminó el carrusel de dos slides y se sustituyó por una sección estática `.hero-section` con imagen de fondo, overlay oscuro, titular "SERVICIO AUTOMOTRIZ", botón WhatsApp y botón "CONTÁCTANOS"
 - Logo de la marca (`img/logo-gleen.png`) como imagen en la columna derecha del hero (pendiente de asset)
 - Mini-servicios actualizados: íconos y textos reemplazados por Mantenimiento, Reparación y Refacciones/Accesorios
