@@ -98,6 +98,52 @@
             }
         }
     });
-    
+
+
+    // Service list vertical scroll (show 4, navigate the rest)
+    var $serviceViewport = $('.service-nav-viewport');
+    if ($serviceViewport.length) {
+        var $items = $serviceViewport.find('.nav-link');
+        var $upBtn = $('.service-scroll-up');
+        var $downBtn = $('.service-scroll-down');
+        var visible = 4;
+
+        // Height of one item including its bottom margin
+        function itemStep() {
+            return $items.eq(0).outerHeight(true);
+        }
+
+        // Fit the viewport to exactly `visible` items (ignoring the last margin)
+        function fitViewport() {
+            if (!$items.length) return;
+            var h = 0;
+            var count = Math.min(visible, $items.length);
+            for (var i = 0; i < count; i++) {
+                h += $items.eq(i).outerHeight(true);
+            }
+            h -= parseFloat($items.eq(count - 1).css('marginBottom')) || 0;
+            $serviceViewport.css('height', h);
+            updateButtons();
+        }
+
+        // Enable/disable arrows at the ends of the list
+        function updateButtons() {
+            var el = $serviceViewport[0];
+            var maxScroll = el.scrollHeight - el.clientHeight - 1;
+            $upBtn.prop('disabled', el.scrollTop <= 0);
+            $downBtn.prop('disabled', el.scrollTop >= maxScroll);
+        }
+
+        $upBtn.on('click', function () {
+            $serviceViewport[0].scrollBy({ top: -itemStep(), behavior: 'smooth' });
+        });
+        $downBtn.on('click', function () {
+            $serviceViewport[0].scrollBy({ top: itemStep(), behavior: 'smooth' });
+        });
+        $serviceViewport.on('scroll', updateButtons);
+        $(window).on('resize', fitViewport);
+        fitViewport();
+    }
+
 })(jQuery);
 

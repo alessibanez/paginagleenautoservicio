@@ -219,6 +219,41 @@
     color: #FFFFFF !important;
 }
 
+.service-nav-viewport {
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.service-scroll-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 50%;
+    background: var(--dark);
+    color: #FFFFFF;
+    transition: .3s;
+}
+
+.service-scroll-btn:hover {
+    background: var(--primary);
+}
+
+.service-scroll-btn:disabled {
+    opacity: .35;
+    cursor: default;
+}
+
+/* Center the service text vertically next to the image */
+.service .tab-content .col-md-6:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 
 /*** Booking ***/
 .booking {
