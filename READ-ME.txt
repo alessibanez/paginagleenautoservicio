@@ -1,11 +1,107 @@
-  =>  Template Name    : CarServ - Car Repair HTML Template
+# Automotriz Gleen — Sitio Web
 
-  =>  Template Link    : https://htmlcodex.com/car-repair-html-template
+Sitio web estático para **Automotriz Gleen**, taller de servicio automotriz en Toluca. Basado en el template CarServ de HTML Codex, adaptado al diseño de la marca.
 
-  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+---
 
-  =>  Template Author  : HTML Codex
+## Changelog
 
-  =>  Author Website   : https://htmlcodex.com
+### v0.1 — Primera sincronización con el diseño de Canva
 
-  =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+**index.html**
+- Idioma cambiado a `es`
+- Actualización de Font Awesome 5.10 → 6.4
+- **Hero reemplazado**: se eliminó el carrusel de dos slides y se sustituyó por una sección estática `.hero-section` con imagen de fondo, overlay oscuro, titular "SERVICIO AUTOMOTRIZ", botón WhatsApp y botón "CONTÁCTANOS"
+- Logo de la marca (`img/logo-gleen.png`) como imagen en la columna derecha del hero (pendiente de asset)
+- Mini-servicios actualizados: íconos y textos reemplazados por Mantenimiento, Reparación y Refacciones/Accesorios
+
+**css/style.css**
+- Navbar siempre visible desde el inicio (`top: -100px` → `top: 0`)
+- Nuevos estilos para `.hero-section` y `.hero-logo`
+- Botón `.btn-whatsapp` (verde #25D366)
+- Botones flotantes fijos: `.btn-float-whatsapp` y `.btn-float-appointment`
+- Stack de imágenes para sección Testimonial (`.testimonial-img-stack`, `.stack-img--back/mid/front`)
+- Íconos de redes sociales estáticos (`.social-static`) para TikTok, Instagram y Facebook
+
+**js/main.js**
+- Eliminado el scroll listener que mostraba/ocultaba la navbar: ahora siempre está visible vía CSS
+
+**about.html**
+- Eliminada la sección de mini-servicios redundante (3 tarjetas de características)
+
+---
+
+### v0.2 — Assets reales e identidad de marca
+
+**Imágenes de servicios (`index.html` — sección "Explore Our Services")**
+- 8 de 9 servicios ahora tienen foto propia en `img/`: `service-afinacion.jpg`, `service-alineacion-balanceo.jpg`, `service-baterias.jpg`, `service-cambio-aceite.jpg`, `service-direccion-hidraulica.jpg`, `service-frenos.jpg`, `service-sistema-enfriamiento.jpg`, `service-suspension.jpg`
+- Diagnóstico por Escáner conserva placeholder `service-1.jpg` (sin foto disponible aún)
+- Se guardaron también variantes secundarias: `service-afinacion-2.jpg`, `service-direccion-hidraulica-2.jpg`, `service-suspension-2.jpg`
+
+**Hero (`index.html` + `css/style.css`)**
+- Fondo del hero: `img/hero-bg.jpg` (foto oficial del taller, reemplaza el placeholder `carousel-bg-1.jpg`)
+- Logo hero: `img/logofull.png` (logo completo de la marca en columna derecha del hero)
+- Overlay oscurecido reducido: `rgba(0,0,0,.65)` → `rgba(0,0,0,.2)`
+- Altura de la sección aumentada: `min-height: 580px` → `min-height: 780px`
+- Tamaño del logo hero aumentado: `220px` → `380px`
+
+**Navbar — todos los HTML (8 archivos)**
+- Reemplazado el ícono genérico `fa-car` + texto "CarServ" por `img/logobarra.jpg` + texto "GLEEN"
+- Altura del logo de barra aumentada: `40px` → `70px`
+
+**Sección About (`index.html`)**
+- Imagen actualizada: `img/about.jpg` → `img/about-cars.jpg` (`Vehiculos.jpg` del cliente)
+
+---
+
+## Paginas
+
+| Archivo | Descripcion |
+|---|---|
+| `index.html` | Pagina principal: hero carousel, servicios destacados, about, booking, equipo y testimonios |
+| `about.html` | Pagina acerca del taller |
+| `service.html` | Listado completo de servicios |
+| `booking.html` | Formulario de reserva de turno |
+| `team.html` | Equipo de tecnicos |
+| `testimonial.html` | Testimonios de clientes |
+| `contact.html` | Informacion de contacto con mapa embebido |
+| `404.html` | Pagina de error 404 |
+
+## Estructura de archivos
+
+```
+carserv-1.0.0/
+├── index.html
+├── about.html
+├── service.html
+├── booking.html
+├── team.html
+├── testimonial.html
+├── contact.html
+├── 404.html
+├── css/
+│   ├── bootstrap.min.css   # Bootstrap 5 customizado
+│   └── style.css           # Estilos propios del template
+├── js/
+│   └── main.js             # Inicializacion de librerias (WOW, Owl Carousel, etc.)
+├── img/                    # Imagenes del sitio
+└── lib/                    # Librerias JS/CSS de terceros
+    ├── animate/
+    ├── counterup/
+    ├── easing/
+    ├── owlcarousel/
+    ├── tempusdominus/      # Date picker para formulario de booking
+    ├── waypoints/
+    └── wow/
+```
+
+## Dependencias usadas (CDN)
+
+- [Bootstrap 5.0](https://getbootstrap.com/)
+- [Font Awesome 5.10](https://fontawesome.com/)
+- [Bootstrap Icons 1.4](https://icons.getbootstrap.com/)
+- [jQuery 3.4.1](https://jquery.com/)
+- [WOW.js](https://wowjs.uk/) — animaciones al hacer scroll
+- [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/) — carrusel de testimonios
+- [Tempus Dominus](https://getdatepicker.com/) — date picker en el formulario de booking
+- Google Fonts: Barlow (600, 700) + Ubuntu (400, 500)

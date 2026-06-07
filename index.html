@@ -3,13 +3,13 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Automotriz Gleen - Servicio Automotriz en Toluca</title>
+    <title>Automotriz Gleen</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="taller mecánico, servicio automotriz, reparación autos, Toluca" name="keywords">
     <meta content="Servicio automotriz en Toluca - reparación, mantenimiento y servicio profesional" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/logobarra.jpg" rel="icon" type="image/jpeg">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">Cargando...</span>
         </div>
     </div>
     <!-- Spinner End -->
@@ -45,28 +45,19 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
         <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h2 class="m-0 text-primary"><i class="fa fa-car me-3"></i>CarServ</h2>
+            <img src="img/logobarra.jpg" alt="Automotriz Gleen" class="me-2" style="height: 70px;"><h2 class="m-0 text-primary">GLEEN</h2>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Services</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu fade-up m-0">
-                        <a href="booking.html" class="dropdown-item">Booking</a>
-                        <a href="team.html" class="dropdown-item">Technicians</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="#inicio" class="nav-item nav-link active">Inicio</a>
+                <a href="#nosotros" class="nav-item nav-link">Nosotros</a>
+                <a href="#servicios" class="nav-item nav-link">Servicios</a>
+                <a href="#contacto" class="nav-item nav-link">Contacto</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalCotizacion" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Solicitar Cotización<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -78,7 +69,7 @@
         - img/hero-bg.jpg  → Foto del mecánico en taller (fondo del hero). Actualmente usa carousel-bg-1.jpg como placeholder.
         - img/logo-gleen.png → Badge/escudo "AUTOMOTRIZ GLEEN" (esquina inferior derecha del hero).
     -->
-    <div class="hero-section">
+    <div class="hero-section" id="inicio">
         <div class="container position-relative z-1">
             <div class="row align-items-center min-vh-hero">
                 <div class="col-lg-7 col-12">
@@ -89,14 +80,14 @@
                         REPARACIÓN, MANTENIMIENTO Y SERVICIO,<br>PROFESIONAL EN TOLUCA
                     </p>
                     <div class="d-flex flex-wrap gap-3 animated slideInDown">
-                        <a href="" class="btn btn-whatsapp py-3 px-4 d-flex align-items-center gap-2">
+                        <a href="https://wa.me/527225343858" target="_blank" rel="noopener" class="btn btn-whatsapp py-3 px-4 d-flex align-items-center gap-2">
                             <i class="fab fa-whatsapp fs-5"></i> WhatsApp
                         </a>
-                        <a href="" class="btn btn-outline-light py-3 px-4 fw-bold">CONTÁCTANOS</a>
+                        <a href="#contacto" class="btn btn-outline-light py-3 px-4 fw-bold">CONTÁCTANOS</a>
                     </div>
                 </div>
                 <div class="col-lg-5 d-none d-lg-flex justify-content-end align-items-end">
-                    <img src="img/logo-gleen.png" alt="Automotriz Gleen" class="hero-logo">
+                    <img src="img/logofull.png" alt="Automotriz Gleen" class="hero-logo">
                 </div>
             </div>
         </div>
@@ -145,15 +136,14 @@
 
 
     <!-- About Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="nosotros">
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.1s">
-                    <!-- ASSET PENDIENTE: reemplazar img/about.jpg con img/about-cars.jpg cuando esté disponible -->
-                    <img class="img-fluid w-100 rounded" src="img/about.jpg" style="object-fit: cover; max-height: 380px;" alt="Gleen Automotriz — flota de vehículos">
+                    <img class="img-fluid w-100 rounded" src="img/about-cars.jpg" style="object-fit: cover; max-height: 380px;" alt="Gleen Automotriz — flota de vehículos">
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.1s">
-                    <h6 class="text-primary text-uppercase">// About Us //</h6>
+                    <h6 class="text-primary text-uppercase">// Nosotros //</h6>
                     <h1 class="mb-4 text-uppercase"><span class="text-primary">Gleen,</span> su mejor opción en servicios automotrices</h1>
                     <p class="mb-0">Gleen Automotriz: Ubicados en Toluca, somos un concepto nuevo e innovador diseñado para lograr en nuestros clientes la mejor relación entre calidad, precio y servicio. Nos especializamos en mantenimiento de tipo preventivo y correctivo para todas las marcas y modelos, operados por personal profesional calificado.</p>
                 </div>
@@ -164,11 +154,11 @@
 
 
     <!-- Services Start -->
-    <div class="container-xxl service py-5">
+    <div class="container-xxl service py-5" id="servicios">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-primary text-uppercase">// Nuestros Servicios //</h6>
-                <h1 class="mb-5">Explore Our Services</h1>
+                <h1 class="mb-5">Explora Nuestros Servicios</h1>
             </div>
             <div class="row g-4 align-items-center wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-lg-4">
@@ -227,13 +217,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-1.jpg" style="object-fit: cover;" alt="Afinación">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-afinacion.jpg" style="object-fit: cover;" alt="Afinación">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Afinación</h3>
                                     <p class="mb-4">Asegura el máximo rendimiento de tu vehículo con nuestro mantenimiento preventivo. Realizamos un diagnóstico por escáner, revisión de frenos y el ajuste o cambio de fluidos, filtros y bujías que tu motor necesite. Al realizar este servicio, mejoras tu rendimiento de gasolina, garantizas un manejo suave y reduces las emisiones contaminantes.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -241,13 +231,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-2.jpg" style="object-fit: cover;" alt="Alineación y Balanceo">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-alineacion-balanceo.jpg" style="object-fit: cover;" alt="Alineación y Balanceo">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Alineación y Balanceo</h3>
                                     <p class="mb-4">Inspección y diagnóstico general de llantas, rines y los componentes de la suspensión y la dirección, alineación y balanceo de las ruedas por computadora. Se minimiza la vibración del auto y el jaloneo hacia los lados, las llantas giran con mayor libertad, desacelera el desgaste de las llantas y mejora la comodidad al manejar.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -255,13 +245,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-3.jpg" style="object-fit: cover;" alt="Baterías">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-baterias.jpg" style="object-fit: cover;" alt="Baterías">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Baterías</h3>
                                     <p class="mb-4">Revisión y diagnóstico de la batería. La batería del auto es un elemento que se encarga de brindar energía eléctrica para que pueda encenderse y utilizar todos los componentes eléctricos en su interior.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -269,13 +259,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-4.jpg" style="object-fit: cover;" alt="Cambio de Aceite">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-cambio-aceite.jpg" style="object-fit: cover;" alt="Cambio de Aceite">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Cambio de Aceite</h3>
                                     <p class="mb-4">Cambiamos el aceite del motor y el filtro con los productos y las especificaciones que recomienda el fabricante de tu vehículo. Revisamos y rellenamos los demás niveles de fluidos e inspeccionamos posibles fugas. Un cambio de aceite a tiempo lubrica y protege el motor, reduce el desgaste de sus piezas, mejora el rendimiento de combustible y alarga la vida útil de tu auto.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -283,13 +273,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-1.jpg" style="object-fit: cover;" alt="Dirección Hidráulica">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-direccion-hidraulica.jpg" style="object-fit: cover;" alt="Dirección Hidráulica">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Dirección Hidráulica</h3>
                                     <p class="mb-4">Cambio de aceite del sistema de dirección, revisión de los sistemas hidráulicos y revisión de los sistemas mecánicos.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -297,13 +287,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-2.jpg" style="object-fit: cover;" alt="Frenos">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-frenos.jpg" style="object-fit: cover;" alt="Frenos">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Frenos</h3>
                                     <p class="mb-4">Inspección del pedal, booster, cilindro maestro y líquido de frenos; diagnóstico de la vida útil de los frenos, incluyendo balatas, zapatas, discos y tambores; ajuste de balatas, limpieza de residuos y polvo en piezas mecánicas, diagnóstico del estado del líquido de frenos e inspección y diagnóstico de componentes adyacentes: suspensión, amortiguadores, eje motriz, cubrepolvos y flechas.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -311,13 +301,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-3.jpg" style="object-fit: cover;" alt="Sistema de Enfriamiento">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-sistema-enfriamiento.jpg" style="object-fit: cover;" alt="Sistema de Enfriamiento">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Sistema de Enfriamiento</h3>
                                     <p class="mb-4">Diagnóstico electrónico del sistema eléctrico, limpieza del sistema, inspección de mangueras, bandas, sensores, bulbos de temperatura y bomba de agua, relleno de anticongelante bajo especificaciones del fabricante.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -325,13 +315,13 @@
                             <div class="row g-4">
                                 <div class="col-md-6" style="min-height: 350px;">
                                     <div class="position-relative h-100">
-                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-4.jpg" style="object-fit: cover;" alt="Suspensión">
+                                        <img class="position-absolute img-fluid w-100 h-100" src="img/service-suspension.jpg" style="object-fit: cover;" alt="Suspensión">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Suspensión</h3>
                                     <p class="mb-4">Revisión del buen funcionamiento de toda la suspensión, inspección de amortiguadores y dictamen sobre su vida útil, ajustes de piezas en caso de ser necesario y cambio de piezas de la mejor calidad.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -345,7 +335,7 @@
                                 <div class="col-md-6">
                                     <h3 class="mb-3">Diagnóstico por Escáner</h3>
                                     <p class="mb-4">Localiza el origen de cualquier problema en tu vehículo con precisión tecnológica. Escaneamos todos los sistemas y computadoras de tu auto para entregarte un diagnóstico general por escrito y realizar el borrado de códigos de falla si es necesario. Recuerda: el escáner es nuestra mejor herramienta para saber exactamente dónde trabajar, garantizando así que inviertas solo en las reparaciones que tu auto realmente necesita.</p>
-                                    <a href="booking.html" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
+                                    <a href="#contacto" class="btn btn-primary py-3 px-5 mt-3">Agendar cita<i class="fa fa-arrow-right ms-3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -360,11 +350,11 @@
 
 
     <!-- Contact Start -->
-    <div class="container-xxl py-5">
+    <div class="container-xxl py-5" id="contacto">
         <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <h6 class="text-primary text-uppercase">// Contáctanos //</h6>
-                <h1 class="mb-5">Contact For Any Query</h1>
+                <h1 class="mb-5">Contáctanos para cualquier consulta</h1>
             </div>
             <div class="row g-4 mb-5 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="col-md-4 text-center">
@@ -420,29 +410,29 @@
             <div class="row g-5 align-items-center">
                 <!-- Columna izquierda: testimonios -->
                 <div class="col-lg-6">
-                    <h6 class="text-primary text-uppercase">// Testimonial //</h6>
-                    <h1 class="mb-4">Our Clients Say!</h1>
+                    <h6 class="text-primary text-uppercase">// Testimonios //</h6>
+                    <h1 class="mb-4">¡Lo que dicen nuestros clientes!</h1>
                     <!-- Testimonio 1 - fondo primario -->
-                    <div class="d-flex align-items-center mb-2">
-                        <img class="rounded-circle flex-shrink-0" src="img/testimonial-1.jpg" style="width:64px;height:64px;object-fit:cover;border:3px solid var(--primary);" alt="">
-                        <div class="ms-3">
-                            <h5 class="mb-0">Client Name</h5>
-                            <small class="text-muted">Profession</small>
-                        </div>
-                    </div>
-                    <div class="bg-primary text-white p-4 rounded mb-4">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
-                    <!-- Testimonio 2 - fondo claro -->
                     <div class="d-flex align-items-center mb-2">
                         <img class="rounded-circle flex-shrink-0" src="img/testimonial-2.jpg" style="width:64px;height:64px;object-fit:cover;border:3px solid var(--primary);" alt="">
                         <div class="ms-3">
-                            <h5 class="mb-0">Client Name</h5>
-                            <small class="text-muted">Profession</small>
+                            <h5 class="mb-0">Carlos Moreno</h5>
+                            <small class="text-muted">Chofer</small>
+                        </div>
+                    </div>
+                    <div class="bg-primary text-white p-4 rounded mb-4">
+                        <p class="mb-0">Llevé mi vehículo a Gleen porque tenía problemas al encender y no encontraba dónde me dieran una respuesta concreta. Me hicieron el diagnóstico completo, me explicaron claramente qué tenía y me lo entregaron el mismo día. El precio fue justo y el trato muy profesional. Sin duda regresaré.</p>
+                    </div>
+                    <!-- Testimonio 2 - fondo claro -->
+                    <div class="d-flex align-items-center mb-2">
+                        <img class="rounded-circle flex-shrink-0" src="img/testimonial-1.jpg" style="width:64px;height:64px;object-fit:cover;border:3px solid var(--primary);" alt="">
+                        <div class="ms-3">
+                            <h5 class="mb-0">Mariana Soto</h5>
+                            <small class="text-muted">Ama de casa</small>
                         </div>
                     </div>
                     <div class="bg-light p-4 rounded">
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">Llegué sin cita para un cambio de aceite y me atendieron sin problema. Lo que más me gustó fue que en ningún momento intentaron venderme servicios que no necesitaba, eso genera mucha confianza. Ya recomendé el taller con mi familia y planeo seguir viniendo.</p>
                     </div>
                 </div>
                 <!-- Columna derecha: imágenes apiladas + redes sociales -->
@@ -452,9 +442,15 @@
                     <!-- img/gleen-galeria-2.png — imagen del medio del stack -->
                     <!-- img/gleen-galeria-3.png — imagen inferior (fondo del stack) -->
                     <div class="testimonial-img-stack">
-                        <img src="img/gleen-galeria-3.png" class="stack-img stack-img--back" alt="Gleen galería 3">
-                        <img src="img/gleen-galeria-2.png" class="stack-img stack-img--mid" alt="Gleen galería 2">
-                        <img src="img/gleen-galeria-1.png" class="stack-img stack-img--front" alt="Gleen galería 1">
+                        <video class="stack-img stack-img--back" autoplay muted loop playsinline>
+                            <source src="videos/3.mp4" type="video/mp4">
+                        </video>
+                        <video class="stack-img stack-img--mid" autoplay muted loop playsinline>
+                            <source src="videos/2.mp4" type="video/mp4">
+                        </video>
+                        <video class="stack-img stack-img--front" autoplay muted loop playsinline>
+                            <source src="videos/1.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <!-- Iconos de redes sociales estáticos -->
                     <div class="d-flex flex-column gap-3">
@@ -473,7 +469,7 @@
     <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Dirección</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Av. Independencia 1313-A, Col. Reforma y Ferrocarriles Nacionales, C.P. 50070, Toluca, Edo. Méx.</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>722 534-3858</p>
@@ -485,28 +481,20 @@
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Horario de Atención</h4>
                     <h6 class="text-light">Lunes - Viernes:</h6>
                     <p class="mb-4">09:00 - 18:00 hrs.</p>
                     <h6 class="text-light">Sábados:</h6>
                     <p class="mb-0">09:00 - 14:00 hrs.</p>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <h4 class="text-light mb-4">Servicios</h4>
                     <a class="btn btn-link" href="">Mantenimiento</a>
                     <a class="btn btn-link" href="">Reparación</a>
                     <a class="btn btn-link" href="">Refacciones</a>
                     <a class="btn btn-link" href="">Diagnóstico</a>
                     <a class="btn btn-link" href="">Cambio de Aceite</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter</h4>
-                    <p>Recibe noticias y promociones de Automotriz Gleen.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Tu correo electrónico">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Suscribir</button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -518,7 +506,7 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Inicio</a>
+                            <a href="#inicio">Inicio</a>
                             <a href="">Cookies</a>
                             <a href="">Ayuda</a>
                             <a href="">FAQs</a>
@@ -532,7 +520,7 @@
 
 
     <!-- Floating Buttons Start -->
-    <a href="" class="btn-float-whatsapp" title="WhatsApp">
+    <a href="https://wa.me/527225343858" target="_blank" rel="noopener" class="btn-float-whatsapp" title="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
     <a href="" class="btn-float-appointment" title="Agendar cita">
@@ -559,6 +547,157 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Modal Solicitar Cotización -->
+    <div class="modal fade" id="modalCotizacion" tabindex="-1" aria-labelledby="modalCotizacionLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="modalCotizacionLabel">
+                        Solicitar Cotización
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="text-muted mb-4">Completa el formulario y se abrirá tu cliente de correo con la solicitud lista para enviar a <strong>contacto@gleenautomotriz.com</strong>.</p>
+                    <form id="formCotizacion" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Nombre completo <span class="text-danger">*</span></label>
+                                <input type="text" id="cot-nombre" class="form-control border-0 bg-light" placeholder="Tu nombre" style="height:50px;" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Teléfono de contacto <span class="text-danger">*</span></label>
+                                <input type="tel" id="cot-telefono" class="form-control border-0 bg-light" placeholder="722 000-0000" style="height:50px;" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Correo electrónico (para responderte)</label>
+                                <input type="email" id="cot-correo" class="form-control border-0 bg-light" placeholder="tucorreo@ejemplo.com" style="height:50px;">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Vehículo (marca y modelo) <span class="text-danger">*</span></label>
+                                <input type="text" id="cot-vehiculo" class="form-control border-0 bg-light" placeholder="Ej. Nissan Versa" style="height:50px;" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Año del vehículo</label>
+                                <input type="number" id="cot-anio" class="form-control border-0 bg-light" placeholder="Ej. 2018" min="1960" max="2030" style="height:50px;">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Servicio requerido <span class="text-danger">*</span></label>
+                                <select id="cot-servicio" class="form-select border-0 bg-light" style="height:50px;" required>
+                                    <option value="" disabled selected>Selecciona un servicio</option>
+                                    <option>Afinación de motor</option>
+                                    <option>Alineación y balanceo</option>
+                                    <option>Baterías</option>
+                                    <option>Cambio de aceite</option>
+                                    <option>Dirección hidráulica</option>
+                                    <option>Frenos</option>
+                                    <option>Sistema de enfriamiento</option>
+                                    <option>Suspensión</option>
+                                    <option>Diagnóstico por escáner</option>
+                                    <option>Otro / No sé</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Descripción del problema o detalles adicionales</label>
+                                <textarea id="cot-detalles" class="form-control border-0 bg-light" rows="4" placeholder="Describe brevemente qué le pasa a tu vehículo o cualquier detalle que nos ayude a cotizar mejor..."></textarea>
+                            </div>
+                        </div>
+                        <div id="cot-error" class="alert alert-danger mt-3 d-none">Por favor completa los campos obligatorios (*).</div>
+                    </form>
+                </div>
+                <div class="modal-footer border-0 px-4 pb-4">
+                    <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary px-5" id="btnEnviarCotizacion">
+                        <i class="fa fa-envelope me-2"></i>Enviar Cotización
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Modal Solicitar Cotización -->
+
+    <!-- Modal Cotización: abrir cliente de correo con plantilla -->
+    <script>
+    document.getElementById('btnEnviarCotizacion').addEventListener('click', function () {
+        var nombre   = document.getElementById('cot-nombre').value.trim();
+        var telefono = document.getElementById('cot-telefono').value.trim();
+        var correo   = document.getElementById('cot-correo').value.trim();
+        var vehiculo = document.getElementById('cot-vehiculo').value.trim();
+        var anio     = document.getElementById('cot-anio').value.trim();
+        var servicio = document.getElementById('cot-servicio').value;
+        var detalles = document.getElementById('cot-detalles').value.trim();
+        var error    = document.getElementById('cot-error');
+
+        if (!nombre || !telefono || !vehiculo || !servicio) {
+            error.classList.remove('d-none');
+            return;
+        }
+        error.classList.add('d-none');
+
+        var vehiculoCompleto = vehiculo + (anio ? ' (' + anio + ')' : '');
+        var replyTo = correo ? '\nCorreo para responderme: ' + correo : '';
+
+        var asunto = 'Solicitud de cotización – ' + servicio + ' – ' + vehiculoCompleto;
+        var cuerpo =
+            'Hola, equipo de Automotriz Gleen.\n\n' +
+            'Me gustaría solicitar una cotización para el siguiente servicio:\n\n' +
+            'Nombre: ' + nombre + '\n' +
+            'Teléfono: ' + telefono +
+            replyTo + '\n' +
+            'Vehículo: ' + vehiculoCompleto + '\n' +
+            'Servicio requerido: ' + servicio + '\n' +
+            (detalles ? 'Detalles adicionales:\n' + detalles + '\n' : '') +
+            '\nQuedo en espera de su respuesta.\n' +
+            'Saludos.';
+
+        window.location.href =
+            'mailto:contacto@gleenautomotriz.com' +
+            '?subject=' + encodeURIComponent(asunto) +
+            '&body='    + encodeURIComponent(cuerpo);
+
+        bootstrap.Modal.getInstance(document.getElementById('modalCotizacion')).hide();
+    });
+    </script>
+
+    <!-- Stack de videos: rotación en cola cada 3 segundos -->
+    <script>
+    (function () {
+        var stack = document.querySelector('.testimonial-img-stack');
+        if (!stack) return;
+        var busy = false;
+
+        function rotate() {
+            if (busy) return;
+            busy = true;
+
+            var front = stack.querySelector('.stack-img--front');
+            var mid   = stack.querySelector('.stack-img--mid');
+            var back  = stack.querySelector('.stack-img--back');
+
+            // La carta del frente cae inmediatamente debajo de todo
+            // mientras se desliza a la posición trasera
+            front.style.zIndex = '0';
+            mid.style.zIndex   = '3';
+            back.style.zIndex  = '2';
+
+            // Intercambio de clases — la transición CSS anima top y left
+            front.classList.replace('stack-img--front', 'stack-img--back');
+            mid.classList.replace('stack-img--mid',     'stack-img--front');
+            back.classList.replace('stack-img--back',   'stack-img--mid');
+
+            // Una vez terminada la transición, el CSS de las clases toma el control del z-index
+            setTimeout(function () {
+                front.style.zIndex = '';
+                mid.style.zIndex   = '';
+                back.style.zIndex  = '';
+                busy = false;
+            }, 700);
+        }
+
+        setInterval(rotate, 3000);
+    }());
+    </script>
 </body>
 
 </html>

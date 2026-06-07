@@ -1,4 +1,14 @@
 /********** Template CSS **********/
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Compensa la altura del navbar sticky en los saltos de ancla */
+#nosotros, #servicios, #contacto {
+    scroll-margin-top: 88px;
+}
+
 :root {
     --primary: #1985C0;
     --secondary: #F5C414;
@@ -422,11 +432,10 @@
 
 
 /*** Hero Section ***/
-/* ASSET: img/hero-bg.jpg — fondo del hero (foto de mecánico en taller) */
 .hero-section {
     position: relative;
-    min-height: 580px;
-    background-image: url('../img/carousel-bg-1.jpg'); /* placeholder hasta tener hero-bg.jpg */
+    min-height: 780px;
+    background-image: url('../img/hero-bg.jpg');
     background-size: cover;
     background-position: center top;
     display: flex;
@@ -438,7 +447,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, .65);
+    background: rgba(0, 0, 0, .2);
 }
 
 .hero-section .container {
@@ -447,8 +456,8 @@
 }
 
 .hero-logo {
-    max-width: 220px;
-    max-height: 220px;
+    max-width: 380px;
+    max-height: 380px;
     object-fit: contain;
     filter: drop-shadow(0 2px 12px rgba(0, 0, 0, .5));
 }
@@ -506,19 +515,21 @@
 /*** Stack de imágenes (sección Testimonial) ***/
 .testimonial-img-stack {
     position: relative;
-    width: 350px;
-    height: 420px;
+    width: 445px;
+    height: 535px;
     flex-shrink: 0;
-    transform: translateX(-40px);
+    transform: translateX(-50px);
 }
 
 .testimonial-img-stack .stack-img {
     position: absolute;
-    width: 250px;
-    height: 330px;
+    width: 325px;
+    height: 425px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, .25);
+    transition: top 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+                left 0.65s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Las tres cartas tienen la misma orientación,
@@ -530,14 +541,14 @@
 }
 
 .stack-img--mid {
-    top: 40px;
-    left: 40px;
+    top: 50px;
+    left: 50px;
     z-index: 2;
 }
 
 .stack-img--front {
-    top: 80px;
-    left: 80px;
+    top: 100px;
+    left: 100px;
     z-index: 3;
 }
 
