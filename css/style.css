@@ -4,6 +4,13 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Evita el desbordamiento horizontal en móvil (espacios en blanco al deslizar).
+   Se usa `clip` en vez de `hidden` para NO romper el navbar position: sticky. */
+html, body {
+    overflow-x: clip;
+    max-width: 100%;
+}
+
 /* Compensa la altura del navbar sticky en los saltos de ancla */
 #nosotros, #servicios, #contacto {
     scroll-margin-top: 88px;
@@ -100,7 +107,7 @@ html {
     margin-right: 30px;
     padding: 25px 0;
     color: #FFFFFF;
-    font-size: 15px;
+    font-size: 18px;
     text-transform: uppercase;
     outline: none;
 }
@@ -455,6 +462,16 @@ html {
     z-index: 1;
 }
 
+.min-vh-hero {
+    min-height: 620px;
+}
+
+/* Título del hero responsivo: 5rem en escritorio, se reduce en móvil
+   para que "AUTOMOTRIZ" no se salga y cause scroll horizontal */
+.hero-section h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+}
+
 .hero-logo {
     max-width: 380px;
     max-height: 380px;
@@ -576,3 +593,57 @@ html {
 .social-static.tiktok { background: #010101; }
 .social-static.instagram { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
 .social-static.facebook { background: #1877F2; }
+
+/* 992–1399px: columnas lado a lado pero angostas — sin desplazamiento lateral */
+@media (min-width: 992px) and (max-width: 1399.98px) {
+    .testimonial-img-stack {
+        width: 390px;
+        height: 480px;
+        transform: none;
+    }
+    .testimonial-img-stack .stack-img {
+        width: 285px;
+        height: 375px;
+    }
+    .stack-img--mid  { top: 47px; left: 47px; }
+    .stack-img--front { top: 94px; left: 94px; }
+}
+
+/* Tablet (columnas apiladas verticalmente) */
+@media (max-width: 991.98px) {
+    .testimonial-img-stack {
+        width: 325px;
+        height: 400px;
+        transform: none;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+    .testimonial-img-stack .stack-img {
+        width: 245px;
+        height: 320px;
+    }
+    .stack-img--mid  { top: 38px; left: 38px; }
+    .stack-img--front { top: 76px; left: 76px; }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .testimonial-img-stack {
+        width: 252px;
+        height: 312px;
+        transform: none;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+    .testimonial-img-stack .stack-img {
+        width: 190px;
+        height: 250px;
+    }
+    .stack-img--mid  { top: 31px; left: 31px; }
+    .stack-img--front { top: 62px; left: 62px; }
+}
+
+/* Animaciones de scroll (WOW.js): que el contenido aparezca más rápido */
+.wow.animated {
+    animation-duration: 0.55s;
+}

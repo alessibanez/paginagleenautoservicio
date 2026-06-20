@@ -13,7 +13,13 @@
     
     
     // Initiate the wowjs
-    new WOW().init();
+    // offset negativo: dispara las animaciones antes (cuando el elemento aún está
+    // ~200px bajo el borde inferior), para que el contenido aparezca sin esperar.
+    new WOW({
+        offset: -200,
+        mobile: true,
+        live: true
+    }).init();
 
 
     // Navbar always visible (floating from the start)
@@ -100,13 +106,15 @@
     });
 
 
-    // Service list vertical scroll (show 4, navigate the rest)
+    // Service list vertical carousel (show 4, loop infinitely in both directions)
     var $serviceViewport = $('.service-nav-viewport');
     if ($serviceViewport.length) {
+        var $list = $serviceViewport.find('.nav-pills');
         var $items = $serviceViewport.find('.nav-link');
         var $upBtn = $('.service-scroll-up');
         var $downBtn = $('.service-scroll-down');
         var visible = 4;
+        var animating = false;
 
         // Height of one item including its bottom margin
         function itemStep() {
@@ -123,24 +131,48 @@
             }
             h -= parseFloat($items.eq(count - 1).css('marginBottom')) || 0;
             $serviceViewport.css('height', h);
-            updateButtons();
         }
 
-        // Enable/disable arrows at the ends of the list
-        function updateButtons() {
-            var el = $serviceViewport[0];
-            var maxScroll = el.scrollHeight - el.clientHeight - 1;
-            $upBtn.prop('disabled', el.scrollTop <= 0);
-            $downBtn.prop('disabled', el.scrollTop >= maxScroll);
+        // Runs `done` once the list's transform transition finishes
+        function onListTransitionEnd(done) {
+            $list.one('transitionend', function (e) {
+                if (e.target !== $list[0]) return;          // ignore child transitions
+                done();
+            });
         }
 
-        $upBtn.on('click', function () {
-            $serviceViewport[0].scrollBy({ top: -itemStep(), behavior: 'smooth' });
-        });
-        $downBtn.on('click', function () {
-            $serviceViewport[0].scrollBy({ top: itemStep(), behavior: 'smooth' });
-        });
-        $serviceViewport.on('scroll', updateButtons);
+        // Advance: slide up one item, then move the first item to the end
+        function goDown() {
+            if (animating || $items.length <= visible) return;
+            animating = true;
+            var step = itemStep();
+            $list.css({ transition: 'transform .35s ease', transform: 'translateY(' + (-step) + 'px)' });
+            onListTransitionEnd(function () {
+                $list.css('transition', 'none').css('transform', 'translateY(0)');
+                $items.eq(0).appendTo($list);              // first goes to the bottom
+                $items = $serviceViewport.find('.nav-link');
+                $list[0].offsetHeight;                     // force reflow before re-enabling transitions
+                animating = false;
+            });
+        }
+
+        // Go back: move the last item to the top, then slide it into view
+        function goUp() {
+            if (animating || $items.length <= visible) return;
+            animating = true;
+            var step = itemStep();
+            $items.eq($items.length - 1).prependTo($list); // last goes to the top
+            $items = $serviceViewport.find('.nav-link');
+            $list.css({ transition: 'none', transform: 'translateY(' + (-step) + 'px)' });
+            $list[0].offsetHeight;                         // force reflow so the next transition runs
+            $list.css({ transition: 'transform .35s ease', transform: 'translateY(0)' });
+            onListTransitionEnd(function () {
+                animating = false;
+            });
+        }
+
+        $upBtn.on('click', goUp);
+        $downBtn.on('click', goDown);
         $(window).on('resize', fitViewport);
         fitViewport();
     }
