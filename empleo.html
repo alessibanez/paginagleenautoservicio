@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Empleo — Automotriz Gleen</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="empleo, trabajo, taller mecánico, vacantes, Toluca, Automotriz Gleen" name="keywords">
+    <meta content="Trabaja en Automotriz Gleen. Postúlate a nuestras vacantes y sube tu CV en PDF." name="description">
+
+    <!-- Favicon -->
+    <link href="img/logobarra.jpg" rel="icon" type="image/jpeg">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet — FA 6 para soporte de TikTok -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Cargando...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/logobarra.jpg" alt="Automotriz Gleen" class="me-2" style="height: 70px;"><h2 class="m-0 text-secondary">GLEEN AUTOMOTRIZ</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html#inicio" class="nav-item nav-link">Inicio</a>
+                <a href="index.html#nosotros" class="nav-item nav-link">Nosotros</a>
+                <a href="index.html#servicios" class="nav-item nav-link">Servicios</a>
+                <a href="index.html#contacto" class="nav-item nav-link">Contacto</a>
+                <a href="empleo.html" class="nav-item nav-link active">Empleo</a>
+            </div>
+            <a href="index.html#contacto" class="btn btn-primary py-4 px-lg-5 d-block mx-4 mx-lg-0 mb-4 mb-lg-0">Solicitar Cotización<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="empleo-header py-5">
+        <div class="container py-4 text-center">
+            <h6 class="text-secondary text-uppercase mb-2">// Trabaja con nosotros //</h6>
+            <h1 class="text-white display-5 fw-bold mb-0">Únete al equipo de Automotriz Gleen</h1>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Empleo Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+
+                <!-- Columna izquierda: formulario de postulación -->
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="text-primary fw-bold mb-1">Aplica para este puesto</h3>
+                    <p class="text-muted small mb-4"><span class="text-danger">*</span> indica un campo obligatorio</p>
+
+                    <form id="formEmpleo" novalidate enctype="multipart/form-data">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Nombre(s) <span class="text-danger">*</span></label>
+                                <input type="text" name="nombre" class="form-control bg-light" style="height: 55px;" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Apellidos <span class="text-danger">*</span></label>
+                                <input type="text" name="apellidos" class="form-control bg-light" style="height: 55px;" required>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Correo electrónico <span class="text-danger">*</span></label>
+                                <input type="email" name="correo" class="form-control bg-light" style="height: 55px;" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label fw-semibold">País</label>
+                                <input type="text" name="pais" class="form-control bg-light" value="México" style="height: 55px;">
+                            </div>
+                            <div class="col-md-8">
+                                <label class="form-label fw-semibold">Teléfono <span class="text-danger">*</span></label>
+                                <input type="tel" name="telefono" class="form-control bg-light" style="height: 55px;" required>
+                            </div>
+                            <!-- Zona de carga del CV -->
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Currículum (CV) <span class="text-danger">*</span></label>
+                                <div class="cv-upload-zone" id="cvDropZone">
+                                    <div class="cv-upload-icon"><i class="fa fa-file-pdf"></i></div>
+                                    <p class="mb-1"><strong>Haz clic para adjuntar</strong> o arrastra tu archivo aquí</p>
+                                    <p class="cv-filename text-muted mb-0" id="cvFileName">Ningún archivo seleccionado</p>
+                                    <input type="file" name="cv" id="cvInput" accept="application/pdf,.pdf" class="d-none" required>
+                                </div>
+                                <p class="text-muted small mt-2 mb-0">Solo se acepta formato PDF. Tamaño máximo: 5 MB.</p>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label fw-semibold">Cuéntanos sobre ti</label>
+                                <textarea name="mensaje" class="form-control bg-light" rows="5" placeholder="Experiencia, disponibilidad de horario, por qué quieres trabajar con nosotros…"></textarea>
+                            </div>
+
+                            <!-- Honeypot anti-spam: oculto; los humanos lo dejan vacío -->
+                            <input type="text" name="website" class="d-none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">ENVIAR SOLICITUD</button>
+                            </div>
+                            <div class="col-12">
+                                <div id="empleo-status" class="d-none"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Columna derecha: panel de contacto -->
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="empleo-contact-panel p-4 p-lg-5 h-100">
+                        <h3 class="fw-bold mb-4">Contáctanos</h3>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="empleo-contact-icon me-3"><i class="fa fa-map-marker-alt"></i></div>
+                            <div>
+                                <p class="fw-bold mb-0">Dirección</p>
+                                <p class="mb-0">Col. Reforma y Ferrocarriles Nacionales, C.P. 50070, Toluca, Edo. Méx.</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="empleo-contact-icon me-3"><i class="fa fa-phone"></i></div>
+                            <div>
+                                <p class="fw-bold mb-0">Teléfono</p>
+                                <p class="mb-0"><a href="tel:+527206875300">720 687 5300</a></p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="empleo-contact-icon me-3"><i class="fa fa-envelope"></i></div>
+                            <div>
+                                <p class="fw-bold mb-0">Correo</p>
+                                <p class="mb-0"><a href="mailto:contacto@gleenautomotriz.com">contacto@gleenautomotriz.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <div class="empleo-contact-icon me-3"><i class="fa fa-clock"></i></div>
+                            <div>
+                                <p class="fw-bold mb-0">Horario</p>
+                                <p class="mb-0">Lunes a Viernes 09:00–18:00 hrs.<br>Sábados 09:00–14:00 hrs.</p>
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <p class="mb-3">Únete a nuestro equipo de expertos. En Gleen Automotriz sabemos que nuestro mejor motor es contar con personal profesional calificado, siempre pensando en su total satisfacción. Si tienes experiencia en mantenimiento preventivo o correctivo, trabajas con los más altos estándares y compartes nuestra visión de revolucionar el taller tradicional, queremos conocerte.</p>
+                        <p class="mb-0">¿Te interesa? Completa tu información básica en el siguiente formulario, cuéntanos brevemente sobre tu especialidad y adjunta tu CV actualizado. Nuestro equipo de Recursos Humanos revisará tu perfil y se pondrá en contacto contigo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Empleo End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Dirección</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Av. Independencia 1313-A, Col. Reforma y Ferrocarriles Nacionales, C.P. 50070, Toluca, Edo. Méx.</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>720 687 5300</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>contacto@gleenautomotriz.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://www.tiktok.com/@gleen.automotriz?_r=1&_t=ZS-97W21b70Ohw" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/profile.php?id=61591558853900" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/gleen.automotriz?igsh=Nm5lOWhob2IwOTc2" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Horario de Atención</h4>
+                    <h6 class="text-light">Lunes - Viernes:</h6>
+                    <p class="mb-4">09:00 - 18:00 hrs.</p>
+                    <h6 class="text-light">Sábados:</h6>
+                    <p class="mb-0">09:00 - 14:00 hrs.</p>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-light mb-4">Enlaces</h4>
+                    <a class="btn btn-link" href="index.html#inicio">Inicio</a>
+                    <a class="btn btn-link" href="index.html#nosotros">Nosotros</a>
+                    <a class="btn btn-link" href="index.html#servicios">Servicios</a>
+                    <a class="btn btn-link" href="index.html#contacto">Contacto</a>
+                    <a class="btn btn-link" href="empleo.html">Empleo</a>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Automotriz Gleen</a>, Todos los derechos reservados.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html#inicio">Inicio</a>
+                            <a href="">Cookies</a>
+                            <a href="">Ayuda</a>
+                            <a href="">FAQs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Floating Buttons Start -->
+    <a href="https://wa.me/527206875300" target="_blank" rel="noopener" class="btn-float-whatsapp" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Floating Buttons End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Zona de carga del CV: clic, drag & drop y nombre de archivo -->
+    <script>
+    (function () {
+        var zone  = document.getElementById('cvDropZone');
+        var input = document.getElementById('cvInput');
+        var label = document.getElementById('cvFileName');
+        if (!zone || !input) return;
+
+        function mostrarArchivo(file) {
+            if (!file) { label.textContent = 'Ningún archivo seleccionado'; return; }
+            label.textContent = file.name;
+        }
+
+        zone.addEventListener('click', function () { input.click(); });
+
+        ['dragenter', 'dragover'].forEach(function (ev) {
+            zone.addEventListener(ev, function (e) { e.preventDefault(); zone.classList.add('dragover'); });
+        });
+        ['dragleave', 'drop'].forEach(function (ev) {
+            zone.addEventListener(ev, function (e) { e.preventDefault(); zone.classList.remove('dragover'); });
+        });
+        zone.addEventListener('drop', function (e) {
+            if (e.dataTransfer.files.length) {
+                input.files = e.dataTransfer.files;
+                input.dispatchEvent(new Event('change'));
+            }
+        });
+
+        input.addEventListener('change', function () {
+            mostrarArchivo(input.files[0]);
+        });
+    })();
+    </script>
+
+    <!-- Formulario de empleo: envío a send.php (PHP mail con adjunto) vía fetch -->
+    <script>
+    (function () {
+        var form = document.getElementById('formEmpleo');
+        if (!form) return;
+        var status = document.getElementById('empleo-status');
+        var btn = form.querySelector('button[type="submit"]');
+        var input = document.getElementById('cvInput');
+        var MAX_BYTES = 5 * 1024 * 1024; // 5 MB
+
+        function error(msg) {
+            status.className = 'alert alert-danger mb-0';
+            status.textContent = msg;
+            status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            status.className = 'd-none';
+
+            // Validación del CV en el cliente antes de enviar
+            var file = input.files[0];
+            if (!file) { return error('Adjunta tu CV en formato PDF.'); }
+            if (file.type !== 'application/pdf' && !/\.pdf$/i.test(file.name)) {
+                return error('El CV debe ser un archivo PDF.');
+            }
+            if (file.size > MAX_BYTES) {
+                return error('El CV supera el tamaño máximo de 5 MB.');
+            }
+
+            var original = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = 'ENVIANDO...';
+
+            var datos = new FormData(form);
+            datos.append('tipo', 'empleo');
+
+            fetch('send.php', { method: 'POST', body: datos })
+                .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
+                .then(function (data) {
+                    if (data.ok) {
+                        status.className = 'alert alert-success mb-0';
+                        status.textContent = '¡Gracias por tu interés! Recibimos tu solicitud y CV. Te contactaremos pronto.';
+                        form.reset();
+                        document.getElementById('cvFileName').textContent = 'Ningún archivo seleccionado';
+                    } else {
+                        error(data.error || 'No se pudo enviar la solicitud. Inténtalo de nuevo o llámanos.');
+                    }
+                })
+                .catch(function () {
+                    error('Error de conexión. Inténtalo más tarde o llámanos.');
+                })
+                .finally(function () {
+                    btn.disabled = false;
+                    btn.textContent = original;
+                });
+        });
+    })();
+    </script>
+
+</body>
+
+</html>
